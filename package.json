@@ -1,0 +1,23 @@
+{
+  "name": "electron-todo-app",
+  "version": "1.0.0",
+  "description": "Simple TODO app in electron-js.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puncoz/electron-todo-app.git"
+  },
+  "author": "Puncoz Nepal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puncoz/electron-todo-app/issues"
+  },
+  "homepage": "https://github.com/puncoz/electron-todo-app#readme",
+  "devDependencies": {
+    "electron": "^6.0.5"
+  }
+}
