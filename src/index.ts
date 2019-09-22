@@ -1,4 +1,3 @@
-import Main from "./Main";
-import { app } from "electron";
+import App from "./App";
 
-Main.main(app)
+App.bootstrap()

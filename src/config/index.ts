@@ -1,0 +1,1 @@
+export { default as AppConfig } from "./App.config"
