@@ -1,7 +1,7 @@
 {
-  "name": "electron-todo-app",
+  "name": "electron-app-typescript",
   "version": "1.0.0",
-  "description": "Simple TODO app in electron-js.",
+  "description": "Simple Hello World app in electron-js using typescript.",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/puncoz/electron-todo-app.git"
+    "url": "git+https://github.com/puncoz/electron-app-typescript.git"
   },
   "author": "Puncoz Nepal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/puncoz/electron-todo-app/issues"
+    "url": "https://github.com/puncoz/electron-app-typescript/issues"
   },
-  "homepage": "https://github.com/puncoz/electron-todo-app#readme",
+  "homepage": "https://github.com/puncoz/electron-app-typescript#readme",
   "dependencies": {
     "electron": "^6.0.5"
   },
