@@ -2,10 +2,14 @@
   "name": "electron-todo-app",
   "version": "1.0.0",
   "description": "Simple TODO app in electron-js.",
-  "main": "main.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "clean": "rimraf build",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "yarn clean && yarn build && electron ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,12 @@
     "url": "https://github.com/puncoz/electron-todo-app/issues"
   },
   "homepage": "https://github.com/puncoz/electron-todo-app#readme",
-  "devDependencies": {
+  "dependencies": {
     "electron": "^6.0.5"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
   }
 }
