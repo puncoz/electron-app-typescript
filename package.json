@@ -9,7 +9,26 @@
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "yarn clean && yarn build && electron ./build/index.js"
+    "start": "yarn watch && electron ./build/index.js",
+    "predist": "yarn clean && yarn build",
+    "dist": "electron-builder -w -c.extraMetadata.main=build/index.js"
+  },
+  "build": {
+    "appId": "com.puncoz.electron-hello-world",
+    "productName": "electronHelloWorld",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "zip"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "src/assets"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,10 +40,10 @@
     "url": "https://github.com/puncoz/electron-app-typescript/issues"
   },
   "homepage": "https://github.com/puncoz/electron-app-typescript#readme",
-  "dependencies": {
-    "electron": "^6.0.5"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "electron": "^6.0.10",
+    "electron-builder": "^21.2.0",
     "rimraf": "^3.0.0",
     "tslint": "^5.19.0",
     "typescript": "^3.6.2"
